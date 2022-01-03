@@ -6,6 +6,8 @@ import mainPage from '../img/page1.png'
 
 import DraftsOutlinedIcon from '@material-ui/icons/DraftsOutlined';
 import PersonOutlineRoundedIcon from '@material-ui/icons/PersonOutlineRounded';
+// import Popup from 'reactjs-popup';
+// import Card from './Card';
 
 const Header = () =>{
     const [enquire,setenquire] = useState(false)
@@ -34,7 +36,7 @@ const Header = () =>{
                 <div className="Header-apply">{'Apply'}</div>
             </div>
 
-            <div className="Header-menuSelect">
+            {/* <div className="Header-menuSelect">
                 <div className="Header-courses-option"
                     onMouseMove={()=>setcourses(true)}
                 ><MouseListen menu={'Our Courses'} /></div>
@@ -46,7 +48,26 @@ const Header = () =>{
                         <div>123</div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+            {/* <div className="example-warper">
+                {POSITION_TYPES.map((position, i) => (
+                    <Popup
+                        key={`tp-${i}`}        
+                        trigger={          
+                            <button type="button" className="button">            
+                                {position}          
+                            </button>        
+                        }        
+                        position={position}        
+                        on={['hover', 'focus']}        
+                        arrow={position !== 'center center'}      
+                    >        
+                        <Card title={position} />      
+                    </Popup>    
+                ))}
+                )
+                    
+            </div> */}
             <img className="Header-mainPage" src={mainPage}></img>
         </div>
     )
@@ -64,3 +85,8 @@ const MouseListen = ({menu}) =>{
         >{menu}</div>
     )
 }
+
+const POSITION_TYPES = [
+    'bottom center',
+    'right top',
+];

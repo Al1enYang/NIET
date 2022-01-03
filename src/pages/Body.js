@@ -4,9 +4,9 @@ import './Body.css'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+
 
 const Body = () =>{
     const classes1 = useStyles1();
@@ -66,14 +66,14 @@ const Body = () =>{
                             }}
                         >
                             <option aria-label="None" value="" />
-                            <option value={10}>General English</option>
+                            {/* <option value={10}>General English</option>
                             <option value={20}>Diploma</option>
-                            <option value={30}>Certificate</option>
-                            {/* {names.map((name) => (
-                                <MenuItem key={name} value={name}>
-                                {name}
-                              </MenuItem>
-                            ))} */}
+                            <option value={30}>Certificate</option> */}
+                            {names.map((name) => (
+                                <option value={name}>
+                                    {name}
+                                </option>
+                            ))}
                         </Select>
                     </FormControl>
 
@@ -106,9 +106,11 @@ const Body = () =>{
                             }}
                         >
                             <option aria-label="None" value="" />
-                            <option value={10}>January</option>
-                            <option value={20}>February</option>
-                            <option value={30}>March</option>
+                            {months.map((month) => (
+                                <option value={month}>
+                                    {month}
+                                </option>
+                            ))}
                         </Select>
                     </FormControl>
                 </div>
@@ -251,16 +253,38 @@ const useStyles4 = makeStyles((theme) => ({
 }));
 
 const names = [
-    'Oliver Hansen',
-    'Van Henry',
-    'April Tucker',
-    'Ralph Hubbard',
-    'Omar Alexander',
-    'Carlos Abbott',
-    'Miriam Wagner',
-    'Bradley Wilkerson',
-    'Virginia Andrews',
-    'Kelly Snyder',
+    'Diploma of Remedial Massage (Hobart Campus)',
+    'Short Course: Resin Jewellery Making',
+    'Short Course: PVC Tote Bag',
+    'Diploma of Community Services',
+    'Short Course: Fashion Design for Beginners',
+    'Diploma of Applied Fashion Design and Merchandising',
+    'Diploma of Project Management',
+    'Advanced Diploma of Business',
+    'Advanced Diploma of Hospitality Management',
+    'Diploma of Leadership and Management',
+    'General English',
+    'Graduate Diploma of Strategic Leadership',
+    'Graduate Diploma of Management (Learning)',
+    'Certificate II in Skills for Work and Vocational Pathways',
+    'Certificate I in Skills for Vocational Pathways',
+    'Advanced Diploma of Translating',
+    'Diploma of Remedial Massage (Brisbane Campus)',
+    'Advanced Diploma of Leadership and Management',
+    'Certificate IV in Ageing Support',
+    'Certificate III in Individual Support',
+    'Diploma of Hospitality Management',
+    'Certificate IV in Commercial Cookery',
+    'Certificate III in Commercial Cookery',
+    'Diploma of Early Childhood Education and Care',
+    'Certificate III in Early Childhood Education and Care',
+    'Diploma of Business',
+    'Certificate IV in Business',
+    'Certificate III in Business',
+    'Certificate II in Workplace Skills',
+    'Certificate I in Workplace Skills',
+    'Certificate IV in Accounting and Bookkeeping',
+    'Diploma of Accounting',
 ];
 
 const months = [
@@ -277,3 +301,4 @@ const months = [
     'November', 
     'December',
 ]
+
